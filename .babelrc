@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@vue/babel-plugin-transform-vue-jsx"
+  ],
+  "presets": [
+    "@babel/env"
+  ]
+}
