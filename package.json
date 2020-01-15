@@ -4,7 +4,8 @@
   "description": "component-build",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf webpack-lib && webpack --progress --config webpack.config.js"
+    "build-webpack": "rm -rf lib && webpack --progress --config webpack.config.js",
+    "build-rollup": "rm -rf lib && rollup -c rollup.config.v1.js"
   },
   "files": [
     "lib",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
+    "@babel/plugin-external-helpers": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@vue/babel-plugin-transform-vue-jsx": "^1.1.2",
@@ -29,6 +31,13 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-vue": "^5.1.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.2",
     "vue-loader": "^15.8.3",
